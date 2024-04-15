@@ -9,7 +9,6 @@ public class HtmlParser {
      * @return Return the title if it's been found. Otherwise, return "Title not found!".
      */
     public static String getNewsTitle(String _htmlCode) {
-        //TODO Task 1.1 - 5 marks
         if(_htmlCode.indexOf("<title>") == -1)
         {
             return "Title not found!";
@@ -29,7 +28,6 @@ public class HtmlParser {
      * @return Return the content if it's been found. Otherwise, return "Content not found!".
      */
     public static String getNewsContent(String _htmlCode) {
-        //TODO Task 1.2 - 5 marks
         if(_htmlCode.indexOf("\"articleBody\":") == -1)
         {
             return "Content not found!";
