@@ -4,12 +4,10 @@ public class Vector {
     private double[] doubElements;
 
     public Vector(double[] _elements) {
-        //TODO Task 3.1 - 0.5 marks
         doubElements = _elements;
     }
 
     public double getElementatIndex(int _index) {
-        //TODO Task 3.2 - 2 marks
         if (_index >= doubElements.length){
             return -1;
         }
@@ -20,7 +18,6 @@ public class Vector {
     }
 
     public void setElementatIndex(double _value, int _index) {
-        //TODO Task 3.3 - 2 marks
         if(_index>= doubElements.length){
             doubElements[doubElements.length-1] = _value;
         }
@@ -30,18 +27,15 @@ public class Vector {
     }
 
     public double[] getAllElements() {
-        //TODO Task 3.4 - 0.5 marks
 
         return doubElements; //you need to modify the return value
     }
 
     public int getVectorSize() {
-        //TODO Task 3.5 - 0.5 marks
         return doubElements.length; //you need to modify the return value
     }
 
     public Vector reSize(int _size) {
-        //TODO Task 3.6 - 6 marks
         if (doubElements.length == _size || _size<=0){
             Vector oldVector = new Vector(doubElements);
             return oldVector;
@@ -71,7 +65,6 @@ public class Vector {
     }
 
     public Vector add(Vector _v) {
-        //TODO Task 3.7 - 2 marks
         Vector originalVector = new Vector(doubElements);
         if (_v.getVectorSize()>doubElements.length){
             originalVector = originalVector.reSize(_v.getVectorSize());
@@ -88,7 +81,6 @@ public class Vector {
     }
 
     public Vector subtraction(Vector _v) {
-        //TODO Task 3.8 - 2 marks
         Vector originalVector = new Vector(doubElements);
         if (_v.getVectorSize()>doubElements.length){
             originalVector = originalVector.reSize(_v.getVectorSize());
@@ -105,7 +97,6 @@ public class Vector {
     }
 
     public double dotProduct(Vector _v) {
-        //TODO Task 3.9 - 2 marks
         Vector originalVector = new Vector(doubElements);
         if (_v.getVectorSize()>doubElements.length){
             originalVector = originalVector.reSize(_v.getVectorSize());
@@ -122,7 +113,6 @@ public class Vector {
     }
 
     public double cosineSimilarity(Vector _v) {
-        //TODO Task 3.10 - 6.5 marks
         Vector originalVector = new Vector(doubElements);
         if (_v.getVectorSize()>doubElements.length){
             originalVector = originalVector.reSize(_v.getVectorSize());
