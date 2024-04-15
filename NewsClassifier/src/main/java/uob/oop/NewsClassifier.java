@@ -41,7 +41,6 @@ public class NewsClassifier {
     }
 
     public void loadData() {
-        //TODO 4.1 - 2 marks
         newsTitles = new String[myHTMLs.length];
         newsContents = new String[myHTMLs.length];
         for (int i=0;i<myHTMLs.length;i++){
@@ -52,7 +51,6 @@ public class NewsClassifier {
 
     public String[] preProcessing() {
         String[] myCleanedContent = null;
-        //TODO 4.2 - 5 marks
         myCleanedContent = new String[newsContents.length];
         for(int i = 0; i<newsContents.length;i++){
             myCleanedContent[i] = NLP.textCleaning(newsContents[i]);
@@ -98,7 +96,6 @@ public class NewsClassifier {
         String[] vocabularyList = buildVocabulary(_cleanedContents);
         double[][] myTFIDF = null;
         myTFIDF = new double[_cleanedContents.length][vocabularyList.length];
-        //TODO 4.3 - 10 marks
         for (int i =0;i<myTFIDF.length;i++){
             for (int j=0;j<myTFIDF[i].length;j++){
                 myTFIDF[i][j] = calculateTF(_cleanedContents,i,j,vocabularyList) * calculateIDF(_cleanedContents,i,j,vocabularyList);
@@ -109,7 +106,6 @@ public class NewsClassifier {
 
     public String[] buildVocabulary(String[] _cleanedContents) {
         String[] arrayVocabulary = null;
-        //TODO 4.4 - 10 marks
         String wordsInArray = "";
         int N = 0;
         for (int i = 0; i < _cleanedContents.length; i++) {
@@ -184,13 +180,11 @@ public class NewsClassifier {
                     mySimilarity[b] = mySimilarity[b + 1];
                     mySimilarity[b + 1] = temp;
                 }
-                    //TODO 4.5 - 15 marks
         return mySimilarity;
     }
 
     public String groupingResults(String _firstTitle, String _secondTitle) {
         int[] arrayGroup1 = null, arrayGroup2 = null;
-        //TODO 4.6 - 15 marks
         int firstTitleIndex = 0 ;
         int secondTitleIndex = 0;
         for (int i = 0;i<newsTitles.length;i++){
