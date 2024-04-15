@@ -10,7 +10,6 @@ public class NLP {
      */
     public static String textCleaning(String _content) {
         StringBuilder sbContent = new StringBuilder();
-        //TODO Task 2.1 - 3 marks
 
         char[] contentArray = _content.toLowerCase().toCharArray();
         String allowedCharacter = "abcdefghijklmnopqrstuvwxyz0123456789" + " ";
@@ -31,7 +30,6 @@ public class NLP {
      */
     public static String textLemmatization(String _content) {
         StringBuilder sbContent = new StringBuilder();
-        //TODO Task 2.2 - 3 marks
         String[] arrayOfWord = _content.split(" ");
         for (String word: arrayOfWord)
         {
@@ -90,7 +88,6 @@ public class NLP {
     public static String removeStopWords(String _content, String[] _stopWords) {
         StringBuilder sbConent = new StringBuilder();
         boolean skip = false;
-        //TODO Task 2.3 - 3 marks
         String[] _contentArray = _content.split(" ");
         for (int i = 0;i<_contentArray.length;i++){
             for (int x = 0;x<_stopWords.length;x++){
